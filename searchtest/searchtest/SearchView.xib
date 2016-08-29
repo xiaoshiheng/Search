@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入搜索内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8uJ-g6-AMf">
+                    <rect key="frame" x="41" y="23" width="292" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Zgl-Ru-Gsu">
+                    <rect key="frame" x="41" y="61" width="292" height="598"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8uJ-g6-AMf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="23" id="4tm-TX-dMg"/>
+                <constraint firstAttribute="trailing" secondItem="Zgl-Ru-Gsu" secondAttribute="trailing" constant="42" id="Fjb-BF-DCY"/>
+                <constraint firstItem="Zgl-Ru-Gsu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="M36-Ps-xjr"/>
+                <constraint firstAttribute="bottom" secondItem="Zgl-Ru-Gsu" secondAttribute="bottom" constant="8" id="T9m-0B-Owx"/>
+                <constraint firstAttribute="trailing" secondItem="8uJ-g6-AMf" secondAttribute="trailing" constant="42" id="Ut8-bB-eJY"/>
+                <constraint firstItem="Zgl-Ru-Gsu" firstAttribute="top" secondItem="8uJ-g6-AMf" secondAttribute="bottom" constant="8" id="jPF-B4-gIj"/>
+                <constraint firstItem="8uJ-g6-AMf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="pUv-V3-Pim"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="searTable" destination="Zgl-Ru-Gsu" id="2FO-hv-yeX"/>
+                <outlet property="searchText" destination="8uJ-g6-AMf" id="NjX-6K-04N"/>
+                <outlet property="tableBottomContraint" destination="T9m-0B-Owx" id="p2f-6W-wIq"/>
+            </connections>
+        </view>
+    </objects>
+</document>
